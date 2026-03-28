@@ -1,73 +1,225 @@
 {
   "title": "Missão Terminal Linux",
-  "description": "Objeto de aprendizagem introdutório sobre comandos Linux. O foco aqui é reconhecer alguns comandos básicos e entender para que servem.",
+  "description": "Objeto de aprendizagem introdutório sobre comandos Linux. O foco aqui é reconhecer comandos básicos, entender para que servem e praticar um pequeno desafio no terminal. Ao final, há uma pergunta para cada comando estudado.",
   "sections": [
     {
       "type": "text",
       "title": "O que você vai estudar",
-      "text": "Neste material, você vai ver comandos usados para:\n- descobrir onde está;\n- listar arquivos e pastas;\n- entrar em outra pasta;\n- criar pasta e arquivo;\n- consultar ajuda."
+      "text": "Neste material, você vai ver comandos usados para navegar entre pastas, criar arquivos e diretórios, editar arquivos de texto, copiar, mover, buscar, filtrar conteúdo, monitorar o sistema e encerrar processos."
     },
     {
       "type": "table",
-      "title": "Comandos principais",
-      "headers": ["Comando", "Uso"],
+      "title": "Comandos de navegação e ajuda",
+      "headers": [
+        "Comando",
+        "Uso"
+      ],
       "rows": [
-        ["`pwd`", "Mostra o caminho da pasta atual."],
-        ["`ls`", "Lista arquivos e pastas da posição atual."],
-        ["`cd nome-da-pasta`", "Entra em outra pasta."],
-        ["`mkdir atividade2`", "Cria uma pasta."],
-        ["`touch index.html`", "Cria um arquivo vazio."],
-        ["`man ls`", "Abre o manual de um comando."]
+        [
+          "`ls`",
+          "Lista arquivos e pastas do diretório atual."
+        ],
+        [
+          "`man`",
+          "Abre o manual de um comando. Exemplo: `man ls`."
+        ],
+        [
+          "`clear`",
+          "Limpa a tela do terminal."
+        ],
+        [
+          "`cd`",
+          "Entra em outra pasta. Exemplo: `cd Documentos`."
+        ],
+        [
+          "`pwd`",
+          "Mostra o caminho completo da pasta atual."
+        ],
+        [
+          "`whoami`",
+          "Mostra o nome do usuário atual."
+        ],
+        [
+          "`history`",
+          "Mostra o histórico de comandos executados."
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Criação, edição e leitura de arquivos",
+      "headers": [
+        "Comando",
+        "Uso"
+      ],
+      "rows": [
+        [
+          "`mkdir`",
+          "Cria uma pasta. Exemplo: `mkdir atividade1`."
+        ],
+        [
+          "`touch`",
+          "Cria um arquivo vazio. Exemplo: `touch notas.txt`."
+        ],
+        [
+          "`nano`",
+          "Edita arquivos de texto no terminal. Exemplo: `nano notas.txt`."
+        ],
+        [
+          "`cat`",
+          "Mostra o conteúdo de um arquivo na tela."
+        ],
+        [
+          "`>` e `>>`",
+          "Redirecionam a saída para um arquivo. `>` cria ou substitui; `>>` acrescenta conteúdo. Exemplo: `echo teste > saida.txt`."
+        ],
+        [
+          "`mkdir atividade && cd atividade`",
+          "Cria uma pasta e já entra nela."
+        ],
+        [
+          "`mkdir atividade && cd atividade && touch roteiro.txt && nano roteiro.txt`",
+          "Exemplo prático que cria a pasta, entra nela, cria um arquivo e abre o editor."
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Organização e busca de arquivos",
+      "headers": [
+        "Comando",
+        "Uso"
+      ],
+      "rows": [
+        [
+          "`mv`",
+          "Move ou renomeia arquivos e pastas."
+        ],
+        [
+          "`cp`",
+          "Copia arquivos e pastas."
+        ],
+        [
+          "`find`",
+          "Procura arquivos e diretórios pelo nome ou caminho."
+        ],
+        [
+          "`head` e `tail`",
+          "Mostram o começo ou o fim de um arquivo."
+        ],
+        [
+          "`less`",
+          "Permite ler arquivos grandes por partes."
+        ],
+        [
+          "`rm`",
+          "Remove arquivos."
+        ],
+        [
+          "`rmdir`",
+          "Remove diretórios vazios."
+        ],
+        [
+          "`rm -rf`",
+          "Remove diretórios e arquivos de forma recursiva e forçada. Deve ser usado com muito cuidado."
+        ],
+        [
+          "`grep`",
+          "Procura palavras ou padrões dentro de arquivos."
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Rede e informações do sistema",
+      "headers": [
+        "Comando",
+        "Uso"
+      ],
+      "rows": [
+        [
+          "`hostname`",
+          "Mostra o nome da máquina."
+        ],
+        [
+          "`hostname -i`",
+          "Mostra o endereço IP associado ao hostname."
+        ],
+        [
+          "`ip`",
+          "Mostra e administra configurações de rede. Exemplo: `ip a`."
+        ],
+        [
+          "`ping`",
+          "Testa conectividade com outro host. Exemplo: `ping google.com`."
+        ],
+        [
+          "`free -h` e `free -m`",
+          "Mostram uso de memória em formato legível ou em megabytes."
+        ],
+        [
+          "`top`",
+          "Mostra processos em tempo real."
+        ],
+        [
+          "`htop`",
+          "Versão mais visual do monitor de processos, quando instalada."
+        ],
+        [
+          "`ps`",
+          "Lista processos do terminal atual."
+        ],
+        [
+          "`ps aux`",
+          "Lista todos os processos em execução."
+        ],
+        [
+          "`kill`",
+          "Encerra um processo pelo PID."
+        ],
+        [
+          "`df -h`",
+          "Mostra o uso de disco em formato legível."
+        ],
+        [
+          "`ncdu`",
+          "Analisa o uso de espaço em disco de forma interativa, quando instalado."
+        ],
+        [
+          "`uname`",
+          "Mostra informações do sistema operacional."
+        ],
+        [
+          "`lscpu` e `lsusb`",
+          "Mostram informações da CPU e dos dispositivos USB."
+        ]
       ]
     },
     {
       "type": "quiz",
-      "title": "Pergunta 1",
-      "question": "Qual comando lista o conteúdo da pasta atual?",
+      "question": "Qual comando lista arquivos e pastas do diretório atual?",
       "options": [
         {
           "text": "ls",
           "correct": true,
-          "feedback": "Correto. `ls` lista arquivos e pastas da pasta atual."
-        },
-        {
-          "text": "pwd",
-          "correct": false,
-          "feedback": "Não. `pwd` mostra o caminho da pasta atual, mas não lista o conteúdo dela."
+          "feedback": "Correto. `ls` lista o conteúdo do diretório atual."
         },
         {
           "text": "cd",
           "correct": false,
-          "feedback": "Não. `cd` serve para entrar em outra pasta."
+          "feedback": "Não. `cd` muda de diretório."
+        },
+        {
+          "text": "pwd",
+          "correct": false,
+          "feedback": "Não. `pwd` mostra o caminho da pasta atual."
         }
-      ]
+      ],
+      "title": "Pergunta 1"
     },
     {
       "type": "quiz",
-      "title": "Pergunta 2",
-      "question": "Qual comando cria uma pasta chamada `atividade2`?",
-      "options": [
-        {
-          "text": "touch atividade2",
-          "correct": false,
-          "feedback": "Não. `touch` cria um arquivo vazio."
-        },
-        {
-          "text": "mkdir atividade2",
-          "correct": true,
-          "feedback": "Correto. `mkdir atividade2` cria a pasta com esse nome."
-        },
-        {
-          "text": "man atividade2",
-          "correct": false,
-          "feedback": "Não. `man` abre o manual de um comando."
-        }
-      ]
-    },
-    {
-      "type": "quiz",
-      "title": "Pergunta 3",
-      "question": "Se você esqueceu como funciona o comando `ls`, qual comando abre o manual dele?",
+      "question": "Qual comando abre o manual do comando `ls`?",
       "options": [
         {
           "text": "man ls",
@@ -75,21 +227,802 @@
           "feedback": "Correto. `man ls` abre a página de manual do comando `ls`."
         },
         {
-          "text": "pwd ls",
+          "text": "ls man",
           "correct": false,
-          "feedback": "Não. `pwd` mostra o caminho atual."
+          "feedback": "Não. Isso não abre a documentação do comando."
         },
         {
-          "text": "mkdir ls",
+          "text": "help ls",
+          "correct": false,
+          "feedback": "Não neste material. O comando estudado para abrir o manual foi `man`."
+        }
+      ],
+      "title": "Pergunta 2"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando limpa a tela do terminal?",
+      "options": [
+        {
+          "text": "clear",
+          "correct": true,
+          "feedback": "Correto. `clear` limpa a tela do terminal."
+        },
+        {
+          "text": "history",
+          "correct": false,
+          "feedback": "Não. `history` mostra comandos já executados."
+        },
+        {
+          "text": "ps",
+          "correct": false,
+          "feedback": "Não. `ps` lista processos."
+        }
+      ],
+      "title": "Pergunta 3"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando cria uma pasta chamada `atividade1`?",
+      "options": [
+        {
+          "text": "mkdir atividade1",
+          "correct": true,
+          "feedback": "Correto. `mkdir` cria diretórios."
+        },
+        {
+          "text": "touch atividade1",
+          "correct": false,
+          "feedback": "Não. `touch` cria arquivos vazios."
+        },
+        {
+          "text": "cd atividade1",
+          "correct": false,
+          "feedback": "Não. `cd` apenas entra em uma pasta existente."
+        }
+      ],
+      "title": "Pergunta 4"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando entra na pasta `Documentos`?",
+      "options": [
+        {
+          "text": "cd Documentos",
+          "correct": true,
+          "feedback": "Correto. `cd` muda o diretório atual."
+        },
+        {
+          "text": "pwd Documentos",
+          "correct": false,
+          "feedback": "Não. `pwd` só mostra o caminho atual."
+        },
+        {
+          "text": "ls Documentos",
+          "correct": false,
+          "feedback": "Não. `ls` lista o conteúdo, mas não entra na pasta."
+        }
+      ],
+      "title": "Pergunta 5"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra o caminho completo da pasta atual?",
+      "options": [
+        {
+          "text": "pwd",
+          "correct": true,
+          "feedback": "Correto. `pwd` mostra o diretório atual completo."
+        },
+        {
+          "text": "ls",
+          "correct": false,
+          "feedback": "Não. `ls` lista arquivos e pastas."
+        },
+        {
+          "text": "cd",
+          "correct": false,
+          "feedback": "Não. `cd` muda de diretório."
+        }
+      ],
+      "title": "Pergunta 6"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra o nome do usuário atual?",
+      "options": [
+        {
+          "text": "whoami",
+          "correct": true,
+          "feedback": "Correto. `whoami` mostra o usuário logado."
+        },
+        {
+          "text": "hostname",
+          "correct": false,
+          "feedback": "Não. `hostname` mostra o nome da máquina."
+        },
+        {
+          "text": "uname",
+          "correct": false,
+          "feedback": "Não. `uname` mostra informações do sistema."
+        }
+      ],
+      "title": "Pergunta 7"
+    },
+    {
+      "type": "quiz",
+      "question": "Quais redirecionadores enviam a saída de um comando para um arquivo, criando ou substituindo conteúdo, ou acrescentando novas linhas?",
+      "options": [
+        {
+          "text": "> e >>",
+          "correct": true,
+          "feedback": "Correto. `>` cria ou substitui a saída e `>>` acrescenta conteúdo ao arquivo."
+        },
+        {
+          "text": "| e &&",
+          "correct": false,
+          "feedback": "Não. `|` e `&&` têm outras funções e não substituem os redirecionadores estudados."
+        },
+        {
+          "text": "cd e pwd",
+          "correct": false,
+          "feedback": "Não. Esses são comandos, não redirecionadores."
+        }
+      ],
+      "title": "Pergunta 8"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual sequência cria uma pasta chamada `atividade` e já entra nela?",
+      "options": [
+        {
+          "text": "mkdir atividade && cd atividade",
+          "correct": true,
+          "feedback": "Correto. A sequência cria a pasta e depois entra nela."
+        },
+        {
+          "text": "cd atividade && mkdir atividade",
+          "correct": false,
+          "feedback": "Não. Primeiro seria necessário criar a pasta."
+        },
+        {
+          "text": "touch atividade && cd atividade",
+          "correct": false,
+          "feedback": "Não. `touch` cria arquivo, não diretório."
+        }
+      ],
+      "title": "Pergunta 9"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual sequência cria a pasta `atividade`, entra nela, cria `roteiro.txt` e abre esse arquivo no editor?",
+      "options": [
+        {
+          "text": "mkdir atividade && cd atividade && touch roteiro.txt && nano roteiro.txt",
+          "correct": true,
+          "feedback": "Correto. Essa sequência faz as quatro ações na ordem."
+        },
+        {
+          "text": "mkdir atividade && touch roteiro.txt && nano roteiro.txt",
+          "correct": false,
+          "feedback": "Não. Nessa sequência falta entrar na pasta criada."
+        },
+        {
+          "text": "cd atividade && mkdir roteiro.txt && nano roteiro.txt",
+          "correct": false,
+          "feedback": "Não. `mkdir` não cria arquivo de texto."
+        }
+      ],
+      "title": "Pergunta 10"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando cria um arquivo vazio chamado `anotacoes.txt`?",
+      "options": [
+        {
+          "text": "touch anotacoes.txt",
+          "correct": true,
+          "feedback": "Correto. `touch` cria um arquivo vazio com esse nome."
+        },
+        {
+          "text": "mkdir anotacoes.txt",
+          "correct": false,
+          "feedback": "Não. `mkdir` cria diretórios."
+        },
+        {
+          "text": "cat anotacoes.txt",
+          "correct": false,
+          "feedback": "Não. `cat` lê o conteúdo de um arquivo."
+        }
+      ],
+      "title": "Pergunta 11"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando abre `anotacoes.txt` para edição de texto no terminal?",
+      "options": [
+        {
+          "text": "nano anotacoes.txt",
+          "correct": true,
+          "feedback": "Correto. `nano` é o editor de texto estudado neste projeto."
+        },
+        {
+          "text": "cat anotacoes.txt",
+          "correct": false,
+          "feedback": "Não. `cat` mostra o conteúdo, mas não abre para edição."
+        },
+        {
+          "text": "touch anotacoes.txt",
+          "correct": false,
+          "feedback": "Não. `touch` cria o arquivo, mas não o edita."
+        }
+      ],
+      "title": "Pergunta 12"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra o conteúdo do arquivo `anotacoes.txt` na tela?",
+      "options": [
+        {
+          "text": "cat anotacoes.txt",
+          "correct": true,
+          "feedback": "Correto. `cat` exibe o conteúdo do arquivo."
+        },
+        {
+          "text": "nano anotacoes.txt",
+          "correct": false,
+          "feedback": "Não. `nano` abre o editor."
+        },
+        {
+          "text": "mkdir anotacoes.txt",
           "correct": false,
           "feedback": "Não. `mkdir` cria diretórios."
         }
-      ]
+      ],
+      "title": "Pergunta 13"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando pode renomear `rascunho.txt` para `final.txt`?",
+      "options": [
+        {
+          "text": "mv rascunho.txt final.txt",
+          "correct": true,
+          "feedback": "Correto. `mv` move ou renomeia arquivos e pastas."
+        },
+        {
+          "text": "cp rascunho.txt final.txt",
+          "correct": false,
+          "feedback": "Não. `cp` cria uma cópia, não faz a renomeação direta."
+        },
+        {
+          "text": "rm rascunho.txt final.txt",
+          "correct": false,
+          "feedback": "Não. `rm` remove arquivos."
+        }
+      ],
+      "title": "Pergunta 14"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando copia `texto.txt` para `texto_backup.txt`?",
+      "options": [
+        {
+          "text": "cp texto.txt texto_backup.txt",
+          "correct": true,
+          "feedback": "Correto. `cp` copia arquivos e pastas."
+        },
+        {
+          "text": "mv texto.txt texto_backup.txt",
+          "correct": false,
+          "feedback": "Não. `mv` move ou renomeia."
+        },
+        {
+          "text": "cat texto.txt texto_backup.txt",
+          "correct": false,
+          "feedback": "Não. `cat` não copia arquivos dessa forma."
+        }
+      ],
+      "title": "Pergunta 15"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando procura o arquivo `relatorio.txt` a partir da pasta atual?",
+      "options": [
+        {
+          "text": "find . -name \"relatorio.txt\"",
+          "correct": true,
+          "feedback": "Correto. `find` procura arquivos e diretórios pelo nome ou caminho."
+        },
+        {
+          "text": "grep relatorio.txt .",
+          "correct": false,
+          "feedback": "Não. `grep` procura texto dentro de arquivos."
+        },
+        {
+          "text": "ls relatorio.txt",
+          "correct": false,
+          "feedback": "Não. `ls` lista conteúdo, mas não faz busca recursiva."
+        }
+      ],
+      "title": "Pergunta 16"
+    },
+    {
+      "type": "quiz",
+      "question": "Quais comandos mostram o começo ou o fim de um arquivo?",
+      "options": [
+        {
+          "text": "head e tail",
+          "correct": true,
+          "feedback": "Correto. `head` mostra o início e `tail` mostra o fim do arquivo."
+        },
+        {
+          "text": "cp e mv",
+          "correct": false,
+          "feedback": "Não. `cp` e `mv` trabalham com cópia e movimentação."
+        },
+        {
+          "text": "mkdir e cd",
+          "correct": false,
+          "feedback": "Não. Esses comandos lidam com diretórios."
+        }
+      ],
+      "title": "Pergunta 17"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando permite ler `manual.txt` por partes, rolando o conteúdo?",
+      "options": [
+        {
+          "text": "less manual.txt",
+          "correct": true,
+          "feedback": "Correto. `less` é útil para leitura de arquivos grandes."
+        },
+        {
+          "text": "rm manual.txt",
+          "correct": false,
+          "feedback": "Não. `rm` remove o arquivo."
+        },
+        {
+          "text": "pwd manual.txt",
+          "correct": false,
+          "feedback": "Não. `pwd` não lê arquivos."
+        }
+      ],
+      "title": "Pergunta 18"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando remove o arquivo `teste.txt`?",
+      "options": [
+        {
+          "text": "rm teste.txt",
+          "correct": true,
+          "feedback": "Correto. `rm` remove arquivos."
+        },
+        {
+          "text": "rmdir teste.txt",
+          "correct": false,
+          "feedback": "Não. `rmdir` é para diretórios vazios."
+        },
+        {
+          "text": "mv teste.txt",
+          "correct": false,
+          "feedback": "Não. `mv` move ou renomeia."
+        }
+      ],
+      "title": "Pergunta 19"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando remove um diretório vazio chamado `temporaria`?",
+      "options": [
+        {
+          "text": "rmdir temporaria",
+          "correct": true,
+          "feedback": "Correto. `rmdir` remove diretórios vazios."
+        },
+        {
+          "text": "rm temporaria",
+          "correct": false,
+          "feedback": "Não. `rm` é usado principalmente para arquivos."
+        },
+        {
+          "text": "mkdir temporaria",
+          "correct": false,
+          "feedback": "Não. `mkdir` cria diretórios."
+        }
+      ],
+      "title": "Pergunta 20"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando remove a pasta `projeto_antigo` e todo o seu conteúdo de forma recursiva e forçada?",
+      "options": [
+        {
+          "text": "rm -rf projeto_antigo",
+          "correct": true,
+          "feedback": "Correto. `rm -rf` remove diretórios e arquivos de forma recursiva e forçada."
+        },
+        {
+          "text": "rmdir projeto_antigo",
+          "correct": false,
+          "feedback": "Não. `rmdir` só funciona com diretórios vazios."
+        },
+        {
+          "text": "cp projeto_antigo",
+          "correct": false,
+          "feedback": "Não. `cp` copia arquivos e pastas."
+        }
+      ],
+      "title": "Pergunta 21"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra o nome da máquina?",
+      "options": [
+        {
+          "text": "hostname",
+          "correct": true,
+          "feedback": "Correto. `hostname` mostra o nome da máquina."
+        },
+        {
+          "text": "whoami",
+          "correct": false,
+          "feedback": "Não. `whoami` mostra o usuário."
+        },
+        {
+          "text": "uname",
+          "correct": false,
+          "feedback": "Não. `uname` mostra informações do sistema."
+        }
+      ],
+      "title": "Pergunta 22"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra o endereço IP associado ao hostname?",
+      "options": [
+        {
+          "text": "hostname -i",
+          "correct": true,
+          "feedback": "Correto. `hostname -i` mostra o IP associado ao hostname."
+        },
+        {
+          "text": "hostname",
+          "correct": false,
+          "feedback": "Não. `hostname` mostra apenas o nome da máquina."
+        },
+        {
+          "text": "ip",
+          "correct": false,
+          "feedback": "Não exatamente. O item estudado aqui foi `hostname -i`."
+        }
+      ],
+      "title": "Pergunta 23"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando pode mostrar as interfaces e configurações de rede com `ip a`?",
+      "options": [
+        {
+          "text": "ip",
+          "correct": true,
+          "feedback": "Correto. `ip` mostra e administra configurações de rede."
+        },
+        {
+          "text": "ping",
+          "correct": false,
+          "feedback": "Não. `ping` testa conectividade."
+        },
+        {
+          "text": "df -h",
+          "correct": false,
+          "feedback": "Não. `df -h` mostra uso de disco."
+        }
+      ],
+      "title": "Pergunta 24"
+    },
+    {
+      "type": "quiz",
+      "question": "Se você quiser procurar a palavra `erro` dentro de um arquivo chamado `log.txt`, qual comando é o mais adequado?",
+      "options": [
+        {
+          "text": "grep erro log.txt",
+          "correct": true,
+          "feedback": "Correto. `grep` procura palavras ou padrões em arquivos."
+        },
+        {
+          "text": "ping erro log.txt",
+          "correct": false,
+          "feedback": "Não. `ping` testa conectividade de rede."
+        },
+        {
+          "text": "free -h erro log.txt",
+          "correct": false,
+          "feedback": "Não. `free -h` mostra o uso de memória."
+        }
+      ],
+      "title": "Pergunta 25"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando testa conectividade com outro host, como em `ping google.com`?",
+      "options": [
+        {
+          "text": "ping",
+          "correct": true,
+          "feedback": "Correto. `ping` testa conectividade com outro host."
+        },
+        {
+          "text": "hostname -i",
+          "correct": false,
+          "feedback": "Não. `hostname -i` mostra o IP associado ao hostname."
+        },
+        {
+          "text": "grep",
+          "correct": false,
+          "feedback": "Não. `grep` procura texto dentro de arquivos."
+        }
+      ],
+      "title": "Pergunta 26"
+    },
+    {
+      "type": "quiz",
+      "question": "Quais comandos mostram o uso de memória em formato legível ou em megabytes?",
+      "options": [
+        {
+          "text": "free -h e free -m",
+          "correct": true,
+          "feedback": "Correto. `free -h` e `free -m` mostram o uso de memória em formatos diferentes."
+        },
+        {
+          "text": "df -h e ncdu",
+          "correct": false,
+          "feedback": "Não. Esses comandos tratam principalmente do uso de disco."
+        },
+        {
+          "text": "ps e kill",
+          "correct": false,
+          "feedback": "Não. Esses comandos lidam com processos."
+        }
+      ],
+      "title": "Pergunta 27"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra processos em tempo real no terminal?",
+      "options": [
+        {
+          "text": "top",
+          "correct": true,
+          "feedback": "Correto. `top` mostra processos em tempo real."
+        },
+        {
+          "text": "ps",
+          "correct": false,
+          "feedback": "Não. `ps` mostra uma listagem pontual, não um monitor em tempo real."
+        },
+        {
+          "text": "history",
+          "correct": false,
+          "feedback": "Não. `history` mostra comandos já executados."
+        }
+      ],
+      "title": "Pergunta 28"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando é uma versão mais visual do monitor de processos, quando instalada?",
+      "options": [
+        {
+          "text": "htop",
+          "correct": true,
+          "feedback": "Correto. `htop` é uma versão mais visual do monitor de processos."
+        },
+        {
+          "text": "top",
+          "correct": false,
+          "feedback": "Não. `top` também monitora processos, mas a descrição mais visual se refere ao `htop`."
+        },
+        {
+          "text": "uname",
+          "correct": false,
+          "feedback": "Não. `uname` mostra informações do sistema."
+        }
+      ],
+      "title": "Pergunta 29"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando lista os processos do terminal atual?",
+      "options": [
+        {
+          "text": "ps",
+          "correct": true,
+          "feedback": "Correto. `ps` lista processos do terminal atual."
+        },
+        {
+          "text": "ps aux",
+          "correct": false,
+          "feedback": "Não. `ps aux` lista todos os processos em execução."
+        },
+        {
+          "text": "kill",
+          "correct": false,
+          "feedback": "Não. `kill` encerra um processo pelo PID."
+        }
+      ],
+      "title": "Pergunta 30"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra todos os processos em execução no sistema?",
+      "options": [
+        {
+          "text": "ps aux",
+          "correct": true,
+          "feedback": "Correto. `ps aux` lista todos os processos."
+        },
+        {
+          "text": "ps",
+          "correct": false,
+          "feedback": "Não. `ps` mostra apenas os processos do terminal atual."
+        },
+        {
+          "text": "top",
+          "correct": false,
+          "feedback": "Não. `top` monitora em tempo real, mas o comando estudado para listar todos foi `ps aux`."
+        }
+      ],
+      "title": "Pergunta 31"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando encerra um processo pelo PID, como em `kill 1234`?",
+      "options": [
+        {
+          "text": "kill",
+          "correct": true,
+          "feedback": "Correto. `kill` encerra um processo usando o PID."
+        },
+        {
+          "text": "ps",
+          "correct": false,
+          "feedback": "Não. `ps` lista processos."
+        },
+        {
+          "text": "top",
+          "correct": false,
+          "feedback": "Não. `top` monitora processos em tempo real."
+        }
+      ],
+      "title": "Pergunta 32"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra o uso de disco em formato legível?",
+      "options": [
+        {
+          "text": "df -h",
+          "correct": true,
+          "feedback": "Correto. `df -h` mostra o uso de disco em formato legível."
+        },
+        {
+          "text": "free -h",
+          "correct": false,
+          "feedback": "Não. `free -h` mostra o uso de memória."
+        },
+        {
+          "text": "uname",
+          "correct": false,
+          "feedback": "Não. `uname` mostra informações do sistema."
+        }
+      ],
+      "title": "Pergunta 33"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando analisa o uso de espaço em disco de forma interativa, quando instalado?",
+      "options": [
+        {
+          "text": "ncdu",
+          "correct": true,
+          "feedback": "Correto. `ncdu` analisa o uso de espaço em disco de forma interativa."
+        },
+        {
+          "text": "df -h",
+          "correct": false,
+          "feedback": "Não. `df -h` mostra o uso de disco, mas não de forma interativa."
+        },
+        {
+          "text": "top",
+          "correct": false,
+          "feedback": "Não. `top` monitora processos."
+        }
+      ],
+      "title": "Pergunta 34"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra informações do sistema operacional?",
+      "options": [
+        {
+          "text": "uname",
+          "correct": true,
+          "feedback": "Correto. `uname` mostra informações do sistema operacional."
+        },
+        {
+          "text": "hostname",
+          "correct": false,
+          "feedback": "Não. `hostname` mostra o nome da máquina."
+        },
+        {
+          "text": "whoami",
+          "correct": false,
+          "feedback": "Não. `whoami` mostra o usuário atual."
+        }
+      ],
+      "title": "Pergunta 35"
+    },
+    {
+      "type": "quiz",
+      "question": "Quais comandos mostram informações da CPU e dos dispositivos USB?",
+      "options": [
+        {
+          "text": "lscpu e lsusb",
+          "correct": true,
+          "feedback": "Correto. `lscpu` mostra informações da CPU e `lsusb` mostra dispositivos USB."
+        },
+        {
+          "text": "ps e top",
+          "correct": false,
+          "feedback": "Não. Esses comandos tratam de processos."
+        },
+        {
+          "text": "df -h e ncdu",
+          "correct": false,
+          "feedback": "Não. Esses comandos tratam de disco."
+        }
+      ],
+      "title": "Pergunta 36"
+    },
+    {
+      "type": "quiz",
+      "question": "Qual comando mostra o histórico de comandos executados?",
+      "options": [
+        {
+          "text": "history",
+          "correct": true,
+          "feedback": "Correto. `history` mostra os comandos já executados."
+        },
+        {
+          "text": "clear",
+          "correct": false,
+          "feedback": "Não. `clear` limpa a tela do terminal."
+        },
+        {
+          "text": "man",
+          "correct": false,
+          "feedback": "Não. `man` abre o manual de comandos."
+        }
+      ],
+      "title": "Pergunta 37"
+    },
+    {
+      "type": "text",
+      "title": "Desafio",
+      "text": "No terminal, faça a seguinte sequência:\n1. descubra em que pasta você está com `pwd`;\n2. crie uma pasta chamada `atividade_linux` com `mkdir atividade_linux`;\n3. entre nela com `cd atividade_linux`;\n4. crie um arquivo chamado `comandos.txt` com `touch comandos.txt`;\n5. edite o arquivo com `nano comandos.txt` e escreva três comandos estudados;\n6. mostre o conteúdo com `cat comandos.txt`;\n7. crie uma cópia com `cp comandos.txt comandos_copia.txt`;\n8. confira o resultado com `ls`."
+    },
+    {
+      "type": "text",
+      "title": "Resolução",
+      "text": "Uma resolução possível é:\n`pwd`\n`mkdir atividade_linux`\n`cd atividade_linux`\n`touch comandos.txt`\n`nano comandos.txt`\n`cat comandos.txt`\n`cp comandos.txt comandos_copia.txt`\n`ls`\n\nAo final, a pasta deve conter os arquivos `comandos.txt` e `comandos_copia.txt`."
     },
     {
       "type": "text",
       "title": "Mini roteiro para a atividade",
-      "text": "Uma sequência básica para demonstrar no trabalho pode ser:\n1. criar a pasta com `mkdir atividade2`;\n2. entrar nela com `cd atividade2`;\n3. criar o arquivo com `touch index.html`;\n4. conferir o resultado com `ls`."
+      "text": "Uma sequência básica para demonstrar no trabalho pode ser:\n1. limpar a tela com `clear`;\n2. descobrir o usuário com `whoami`;\n3. criar e acessar uma pasta com `mkdir atividade && cd atividade`;\n4. criar um arquivo com `touch exemplo.txt`;\n5. editar com `nano exemplo.txt`;\n6. visualizar com `cat exemplo.txt`;\n7. localizar arquivos com `find . -name \"*.txt\"`;\n8. verificar processos com `ps aux`."
     }
   ]
 }
