@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  background: #f6f1e6;
+  color: #1f1a17;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 14px 40px;
+}
+
+.page-header {
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #7a5b21;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 10px;
+}
+
+.page-intro {
+  margin: 0;
+}
+
+.card {
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid #d7c9ad;
+  border-radius: 12px;
+  background: #fffaf0;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #d7c9ad;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f3e3bf;
+}
+
+.quiz-option {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 10px 14px;
+  border: 1px solid #b89448;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #1f1a17;
+  cursor: pointer;
+}
+
+.feedback {
+  min-height: 24px;
+  margin-bottom: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.feedback.correct {
+  background: #e3f4df;
+  border: 1px solid #9cc58f;
+}
+
+.feedback.wrong {
+  background: #f9e1df;
+  border: 1px solid #d49d96;
+}
+
+.error {
+  border-color: #c77b72;
+  background: #fff0ee;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #f1ead7;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (max-width: 640px) {
+  .quiz-option {
+    width: 100%;
+    margin-right: 0;
+  }
+}
