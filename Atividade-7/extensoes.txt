@@ -1,0 +1,9 @@
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ritwickdey.liveserver
+formulahendry.auto-rename-tag
+christian-kohler.path-intellisense
+eamodio.gitlens
+usernamehw.errorlens
+wayou.vscode-todo-highlight
+rangav.vscode-thunder-client
